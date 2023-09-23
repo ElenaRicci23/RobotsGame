@@ -47,8 +47,6 @@ continue
 5
 6
 stop
-Ricci Elena | 114995
-2
 5
 signal
 5
