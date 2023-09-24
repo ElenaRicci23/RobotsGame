@@ -9,6 +9,7 @@ L’implementazione realizzata si basa sul pattern di programmazione MVC, difatt
 - Utilities (le classi utili al funzionamento delle classi Model)
 
 Descrizione interfacce e responsabilità associate
+
 •	Interfacce
 - Area (model) : Rappresenta lo spazio dove si muovono i robot. Area ha base e altezza prestabilite e si
 occupa in parte della gestione della posizione dei robot.
