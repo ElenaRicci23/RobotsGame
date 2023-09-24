@@ -10,25 +10,29 @@ L’implementazione realizzata si basa sul pattern di programmazione MVC, difatt
 
 Descrizione interfacce e responsabilità associate
 •	Interfacce
-Area (model) : Rappresenta lo spazio dove si muovono i robot. Area ha base e altezza prestabilite e si
+- Area (model) : Rappresenta lo spazio dove si muovono i robot. Area ha base e altezza prestabilite e si
 occupa in parte della gestione della posizione dei robot.
-RobotFactory (model) : Interfaccia che rappresenta un robot. Il robot si trova all'interno di una DefaultArea
+- RobotFactory (model) : Interfaccia che rappresenta un robot. Il robot si trova all'interno di una DefaultArea
 e ha posizione, velocità, angolo e un id che serve per individuare il robot interessato.
-Shape (model) : Interfaccia che rappresenta una figura (rettangolo/cerchio) che rappresenta una zona dell’area
+- Shape (model) : Interfaccia che rappresenta una figura (rettangolo/cerchio) che rappresenta una zona dell’area
 contrassegnata da una label.
+
 •	Implementazioni
-Robot (model): Implementazione di un robot dell'interfaccia RobotFactory.
-DefaultArea (model): Implementazione di default dell'interfaccia Area.
-Rectangle (model): Implementazione dell'interfaccia Shape rappresentante un rettangolo.
-Circle (model): Implementazione dell'interfaccia Shape rappresentante un cerchio.
+- Robot (model): Implementazione di un robot dell'interfaccia RobotFactory.
+- DefaultArea (model): Implementazione di default dell'interfaccia Area.
+- Rectangle (model): Implementazione dell'interfaccia Shape rappresentante un rettangolo.
+- Circle (model): Implementazione dell'interfaccia Shape rappresentante un cerchio.
+
 •	Altre classi
-CartesianCoordinates (model) : Rappresenta una generica posizione (x, y) in un piano a due dimensioni.
+- CartesianCoordinates (model) : Rappresenta una generica posizione (x, y) in un piano a due dimensioni.
 Prende una x e una y come parametri, entrambi double.
-ControllerArea (controller) : Controller dell’area, contiene principalmente l’implementazione dei vari comandi
+- ControllerArea (controller) : Controller dell’area, contiene principalmente l’implementazione dei vari comandi
 del robot, in generale si occupa della gestione di essi.
+
 •	Esecuzione
-Terminal (view) : Si occupa dell’esecuzione del programma da terminale, contiene un oggetto di tipo ControllerArea
+- Terminal (view) : Si occupa dell’esecuzione del programma da terminale, contiene un oggetto di tipo ControllerArea
 che agisce a seconda degli input dell’utente.
+
 L’app va in esecuzione grazie al metodo Terminal.init() che richiama due metodi fondamentali : printMenu() e
 readCommand(). printMenu() stampa il menù del gioco mostrando le due opzioni “Nuova area di gioco (l'area verrà
 popolata da varie zone rettangolari e circolari)” ed “Esci”, che corrispondono rispettivamente ai metodi
@@ -38,29 +42,37 @@ L’esecuzione può essere effettuata anche andando sulla sezione Gradle in alto
 oppure in Run Configurations.
 
 Esempio di una sequenza di comandi eseguibili da terminale.
+
 move
 5
 45
 45
 7
+
 continue
 5
 6
+
 stop
 5
+
 signal
 5
 Ciao_
+
 signal
 3
 Ciao_
+
 Follow
 7
 Ciao_
 70
 8
+
 Stop
 7
+
 Move random
 7
 67
